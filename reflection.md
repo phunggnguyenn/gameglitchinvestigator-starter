@@ -5,14 +5,19 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
+On my first guess, I guessed the number 70. On each attempt, I guessed a higher number than 70, as suggested by the hint. The initial bug that I found was that the hints didn't align with the secret number as the number ended up being lower than my initial guess.
+- List at least two concrete bugs you noticed at the start
   (for example: "the secret number kept changing" or "the hints were backwards").
+1. The hints were backwards.
+2. The number of attempts given did not match the number of attempts that the game indicated I had left.
+3. The new game button doesn't allow me to start a new game.
 
 ---
 
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+Copilot
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
@@ -21,7 +26,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
+- Describe at least one test you ran (manual or using pytest)
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
