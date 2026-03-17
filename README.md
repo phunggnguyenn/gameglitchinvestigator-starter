@@ -3,7 +3,7 @@
 ## 🚨 The Situation
 
 You asked an AI to build a simple "Number Guessing Game" using Streamlit.
-It wrote the code, ran away, and now the game is unplayable. 
+It wrote the code, ran away, and now the game is unplayable.
 
 - You can't win.
 - The hints lie to you.
@@ -26,12 +26,16 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+   The game's purpose was to help me learn how to use AI to propose, test, and verify debugging solutions.
 - [ ] Detail which bugs you found.
+   I found the hints too low and high bug, attempts left bug, and the broken "New Game" bug.
 - [ ] Explain what fixes you applied.
+   I refactored the logic for hints to high/low and attempts left and moved the logic into 'logic_utils.py'
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- [ ] ![Demo](demo.png)
+
 
 ## 🚀 Stretch Features
 
