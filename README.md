@@ -25,16 +25,16 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
+- [X] Describe the game's purpose.
    The game's purpose was to help me learn how to use AI to propose, test, and verify debugging solutions.
-- [ ] Detail which bugs you found.
+- [X] Detail which bugs you found.
    I found the hints too low and high bug, attempts left bug, and the broken "New Game" bug.
-- [ ] Explain what fixes you applied.
+- [X] Explain what fixes you applied.
    I refactored the logic for hints to high/low and attempts left and moved the logic into 'logic_utils.py'
 
 ## 📸 Demo
 
-- [ ] ![Demo](demo.png)
+- [X] ![Demo](demo.png)
 
 
 ## 🚀 Stretch Features
