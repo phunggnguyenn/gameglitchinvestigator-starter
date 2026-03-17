@@ -24,3 +24,14 @@ def check_guess(guess, secret):
 def update_score(current_score: int, outcome: str, attempt_number: int):
     """Update score based on outcome and attempt number."""
     raise NotImplementedError("Refactor this function from app.py into logic_utils.py")
+
+
+def compute_attempts_left(attempt_limit: int, attempts: int, submit_in_progress: bool) -> int:
+    """
+    Return how many attempts the player has left.
+
+    submit_in_progress should be True when a guess is currently being
+    processed, so the pending increment is accounted for before display.
+    """
+    used = attempts + (1 if submit_in_progress else 0)
+    return attempt_limit - used

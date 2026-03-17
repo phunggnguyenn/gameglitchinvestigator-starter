@@ -1,5 +1,6 @@
 import random
 import streamlit as st
+from logic_utils import compute_attempts_left
 
 def get_range_for_difficulty(difficulty: str):
     if difficulty == "Easy":
@@ -33,6 +34,7 @@ def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
 
+##FIX: Refactored hint too high and too low using Copilot Agent mode
     try:
         if guess > secret:
             return "Too High", "📉 Go LOWER!"
@@ -128,10 +130,11 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
-attempts_used = st.session_state.attempts + (1 if submit else 0)
+##FIX: Refactored attempts left logic into logic_utils.py using Copilot Agent mode
+
 attempts_info.info(
     f"Guess a number between {low} and {high}. "
-    f"Attempts left: {attempt_limit - attempts_used}"
+    f"Attempts left: {compute_attempts_left(attempt_limit, st.session_state.attempts, submit)}"
 )
 
 if new_game:

@@ -19,9 +19,9 @@ On my first guess, I guessed the number 70. On each attempt, I guessed a higher 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
 Copilot
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-AI suggested that the hints were backwards due to two separate bugs working together. The first bug was that messages are swapped in check_guess and the second was that there was a string/int type mismatch on even attempts. I verified the results by reviewing the diff to understand the logic that it was applying to fix the bugs.
+AI suggested that the hints were backwards due to two separate bugs working together. The first bug was that messages are swapped in check_guess and the second was that there was a string/int type mismatch on even attempts. I verified the results by reviewing the diff to check the logic that it was applying to fix the bugs and ensuring that it was correct
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
-For the second bug that I had found which was that the number of attempts left did not match the nummber of attempts taken, AI suggested that the bug was due to initalization of st.session_state.attempts was incorrectly set to 1 instead of 0. While this is correct, it didn't consider decreasing the attempt count after the first guess, so when you have no more guesses, the attemps left indicator should say "0" instead of "1." I verified the result by using Inline Chat to ask for a targeted correction on line 134.
+For the second bug that I had found which was that the number of attempts left did not match the nummber of attempts taken, AI suggested that the bug was due to initalization of st.session_state.attempts was incorrectly set to 1 instead of 0. While this is correct, it didn't consider decreasing the attempts count after the first guess, so when you have no more guesses left, the attemps left indicator should say "0" not "1." I verified the result by starting a new game and guessing again.
 
 
 ---
@@ -29,9 +29,12 @@ For the second bug that I had found which was that the number of attempts left d
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+I decided a bug was really fixed by running the app again each time AI fixed the bug to confirm the fix works in the live game.
 - Describe at least one test you ran (manual or using pytest)
   and what it showed you about your code.
+  I ran pytest and it showed that I passed the pytest case in test/test_game_logic.py that specifically targets the attempts left bug, but I failed the test_winning_guess, test_guess_too_high, and test_guess_too_low tests.
 - Did AI help you design or understand any tests? How?
+Yes, it helped me to create a pytest for the attempts left bug that I was fixing.
 
 ---
 
